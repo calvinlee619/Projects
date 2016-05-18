@@ -1,0 +1,1 @@
+{"id":{{blog.id}},"html":"{{blog.html|safe}}"}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block extraLink %}
+<link href="/static/css/profile.css" rel="stylesheet">
+{% endblock %}
+
+{% block container %}
+<div class="container" profile-id="{{ user_info.user.id }}" id="id-data">
+
+			<div class="col-sm-5 blog-siderbar">
+				<div class="siderbar-module siderbar-module-insert">
+
+					<div class="userphoto">
+						<img src="/get_photo/{{ user_info.user.id }}" class="img-responsive">
+					</div>
+
+					<div class="username">
+						{{user_info.get_fullName}}
+					</div>
+
+					<div class="usermenu">
+						<ul class="nav col-sm-offset-4">
+                            <li><a><i class="glyphicon glyphicon-ok"></i> Email: {{ user_info.user.email }}</a></li>
+                            <li class="text-success"><a ><i class="glyphicon glyphicon-plus text-success"></i> Brief-introduction: {{ user_info.short_blog }}</a></li>
+                            {% if flag %}
+							<li><a href="edit_profile"><i class="glyphicon glyphicon-home"></i> Edit Profile</a></li>
+                            <li><a href="edit_password"><i class="glyphicon glyphicon-phone"></i> Edit Password</a></li>
+                            {% else %}
+
+                                {% if flag_follow == True %}
+							    <a class="col-sm-offset-1 col-sm-4 btn icon-btn btn-danger" id="like" href="/unfollow/{{user_info.user.id}}">
+                                    <span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary likespan" id="likefield">
+                                    </span>Unlike
+                                </a>
+                                {% else %}
+                                    <a class="col-sm-offset-1 col-sm-4 btn icon-btn btn-primary" id="like" href="/follow/{{user_info.user.id}}">
+                                    <span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary likespan" id="likefield">
+                                    </span>Like
+                                </a>
+                                {% endif %}
+							{% endif %}
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div class="row panel panel-info col-sm-6 col-sm-offset-1">
+
+				<div class="blogContainner" id = "blogarea">
+{#                    {{ errors }}#}
+
+{#					{% for blog in blogs %}#}
+{#						<div class = "blog">#}
+{##}
+{#							<h3 class="blog-post-title "><img src="/get_photo/{{ user_info.user.id }}"><a href="/other_profile/{{blog.user.id}}">{{blog.get_name}}</a></h3>#}
+{##}
+{#							<p class="blog-post-meta">{{blog.get_time}}</p>#}
+{#							<blockquote>#}
+{#				     			<p>#}
+{#				     				{{blog.get_text}}#}
+{#								</p>#}
+{#								<hr>#}
+{#				     		</blockquote>#}
+{#						</div>#}
+{#					{% endfor %}#}
+
+			    </div>
+			</div>
+		</div>
+    <script src="/static/js/profile.js"></script>
+{#    <script>#}
+{#        $(document).ready(function(){#}
+{#           $("#like").on("click",function(){#}
+{##}
+{#               if ($(this).hasClass("btn-primary")){#}
+{#                   $(this).removeClass("btn-primary");#}
+{#                   $(this).addClass("btn-danger");#}
+{#                   $(this).val("unlike");#}
+{#               }else {#}
+{#                   $(this).addClass("btn-primary");#}
+{#                   $(this).removeClass("btn-danger");#}
+{#                   $(this).val("like");#}
+{#               }#}
+{#           });#}
+{#        });#}
+{#    </script>#}
+{% endblock %}
+

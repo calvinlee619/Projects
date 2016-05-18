@@ -1,0 +1,10 @@
+{"max-entry":{{max_entry}},
+"blogs":[{% for blog in blogs %}
+            {%spaceless%}
+                {% include 'blog.json'%}
+            {%endspaceless%}
+              {% if not forloop.last%}
+                  ,
+              {%endif%}
+          {%endfor%}
+]}

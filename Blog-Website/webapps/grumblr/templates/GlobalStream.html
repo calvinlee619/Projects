@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Global Stream{% endblock %}
+{% block extraLink %}
+    <link href="/static/css/global-stream.css" rel="stylesheet">
+{% endblock %}
+
+{% block container %}
+    {% if global_stream_flag %}
+        <script src="/static/js/grumblr.js"></script>
+        <div class = "container">
+
+			<div class = "row panel panel-info col-md-6 col-md-offset-3">
+
+			    <div class="form-signin">
+
+                    <input type = "textarea" autofocus maxlength = "42" placeholder = "What do you want to say" name = "message"
+                           class="form-control input-lg" id="postarea">
+                    <input type = "submit" value = "post" class="btn btn-primary addblog" id="post_btn">
+
+                </div>
+
+			</div>
+		</div>
+    {% else %}
+        <script src="/static/js/followstream.js"></script>
+        <div class="container">
+            <div class="row col-md-6 panel panel-heading">
+                <h1 class="text-center text-info"> Fllower Stream</h1>
+            </div>
+        </div>
+    {% endif %}
+
+		<div class="container">
+
+			<div class="row panel panel-info col-md-6 col-md-offset-3" id = "blogarea">
+{##}
+{#				{% for error in errors %}#}
+{#					<li style = "color:red">{{error}}</li>#}
+{#				{% endfor %}#}
+{##}
+{#				{% for blog in blogs %}#}
+{##}
+{#					<div class="blog ">#}
+{#						<h3 class="blog-post-title"><img src="/get_photo/{{ blog.user.id }}"><a href="other_profile/{{blog.user.id}}">{{blog.get_name}}</a></h3>#}
+{##}
+{#						<p class="blog-post-meta">{{blog.get_time}}</p>#}
+{#				    	<blockquote>#}
+{#				    		<p>{{blog.get_text}}</p>#}
+{#				    		<hr>#}
+{#				    	</blockquote>#}
+{##}
+{#				    </div>#}
+{##}
+{#				{% endfor %}#}
+
+			</div>
+        </div>
+
+{% endblock %}
+

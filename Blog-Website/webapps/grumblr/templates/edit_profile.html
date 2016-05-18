@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block extraLink %}
+<link href="/static/css/edit_profile.css" rel="stylesheet">
+{% endblock %}
+
+{% block container %}
+        <div class="container"></div>
+
+			<div class="row panel panel-info col-md-6 col-md-offset-3">
+
+                {% for field in form.visible_fields %}
+                        {% for error in field.errors %}
+                            <li style="color: red" class="text-center">{{ error }}...{{ field.html_name }}</li>
+                        {% endfor %}
+                {% endfor %}
+
+                <form action="edit_profile" class = "form-signin" method="post" enctype="multipart/form-data">
+                    {% for field in form.visible_fields %}
+
+                        <label for="{{field.html_name}}" class="control-lable">{{ field.label_tag }}</label>
+                        {{ field }}
+                    {% endfor %}
+                    <label for="email" class="control-lable">Email</label>
+                    <input type="text" name="email" class="form-control" value="{{ userinfo_to_edit.user.email }}">
+                    <button type="submit" class="col-md-6 btn btn-success ">Save</button>
+
+                    {% csrf_token %}
+                </form>
+                <a href="{% url 'profile' %}"><button class = "col-md-offset-1 col-md-2 btn btn-xs" >Cancel</button></a>
+
+
+			</div>
+        </div>
+{% endblock %}

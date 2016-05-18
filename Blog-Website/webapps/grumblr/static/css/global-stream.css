@@ -1,0 +1,111 @@
+body{
+  background-image: url(/media/photos/background.jpg);
+}
+.panel{
+	position: relative;
+	top:80px;
+	border-color: #886600;
+    background: rgba(254, 254, 254, 0.9);
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.blog{
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.addblog{
+	position:relative;
+	left: 110px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.userphoto{
+	position: relative;
+	float:left;
+	width: 50px;
+	height: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.commentbtn{
+  position: relative;
+  float:right;
+  margin-bottom:1px;
+  margin-top: -20px;
+  padding:1px 4px 1px 4px;
+}
+
+.post-footer {
+  /*border-top: 1px solid #ddd;*/
+  margin-top: -40px;
+  padding-top: 1px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.post-footer .input-group-addon a {
+  color: #454545;
+}
+.post-footer .comments-list {
+  padding: 0;
+  margin-top: -10px;
+  margin-left: 50px;
+  list-style-type: none;
+}
+.post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.post-footer .comments-list .comment .avatar {
+  	width: 40px;
+	height: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.post-footer .comments-list .comment .comment-heading .user {
+  font-size: 10px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.post-footer .comments-list .comment .comment-heading .time {
+  font-size: 8px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}

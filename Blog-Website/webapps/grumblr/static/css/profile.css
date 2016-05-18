@@ -1,0 +1,144 @@
+
+.commentbtn{
+  position: relative;
+  float:right;
+  margin-bottom:1px;
+  margin-top: -20px;
+  padding:1px 4px 1px 4px;
+}
+
+.post-footer {
+  /*border-top: 1px solid #ddd;*/
+  margin-top: -40px;
+  padding-top: 1px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.post-footer .input-group-addon a {
+  color: #454545;
+}
+.post-footer .comments-list {
+  padding: 0;
+  margin-top: -10px;
+  margin-left: 50px;
+  list-style-type: none;
+}
+.post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.post-footer .comments-list .comment .avatar {
+  	width: 40px;
+	height: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.post-footer .comments-list .comment .comment-heading .user {
+  font-size: 10px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.post-footer .comments-list .comment .comment-heading .time {
+  font-size: 8px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}
+
+.blog-siderbar{
+	position:relative;
+	top:80px;
+	padding:20px 0 10px 0;
+	background: #fff;
+}
+
+.userphoto img{
+	float:none;
+	margin: 0 auto;
+	width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.username{
+	text-align: center;
+	color: #5a7391;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    margin-top: 10px;
+}
+
+.usermenu {
+  margin-top: 30px;
+/*  text-align: center;*/
+}
+
+.btn-glyphicon {
+    padding:8px;
+    background:#ffffff;
+    margin-right:4px;
+}
+
+.like {
+    padding: 1px 15px 3px 2px;
+    border-radius:50px;
+}
+
+.usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.usermenu ul li {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.panel{
+	position: relative;
+	top:80px;
+	border-color: #886600;
+}
+
+.blog-post-title .userphoto{
+	position: relative;
+	float:left;
+	width: 50px;
+	height: 50px
+    -webkit-border-radius: 30%;
+    -moz-border-radius: 30%;
+    border-radius: 30%;
+    margin-right: 5px;
+}
+
+.blog-post-meta {
+  margin-bottom: 20px;
+    margin-left: 5px;
+  color: #999;
+}
