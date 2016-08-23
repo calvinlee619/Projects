@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name> First Page</display-name>
+    <servlet>
+        <servlet-name>GetYourName_Servlet</servlet-name>
+        <servlet-class>API.Recommendation</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>GetYourName_Servlet</servlet-name>
+        <url-pattern>/recommendation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Search_Restaurants</servlet-name>
+        <servlet-class>API.SearchRestaurant</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Search_Restaurants</servlet-name>
+        <url-pattern>/searchRestaurants</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>History_Servlet</servlet-name>
+        <servlet-class>API.VisitHistory</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>History_Servlet</servlet-name>
+        <url-pattern>/history</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>/index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
